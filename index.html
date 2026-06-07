@@ -11,7 +11,7 @@
         body { font-family: 'Inter', system-ui, sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-        .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
@@ -23,20 +23,17 @@
             </div>
             <h1 class="text-7xl md:text-8xl font-bold tracking-tighter mb-4">AEGIS</h1>
             <p class="text-3xl text-slate-400 mb-6">Public Scam Intelligence Network</p>
-            <p class="max-w-2xl mx-auto text-2xl text-slate-300 leading-tight">
-                Decentralized. Free. Borderless.<br>
-                <span class="text-blue-400">Prevent • Report • Expose</span>
-            </p>
+            <p class="max-w-2xl mx-auto text-2xl text-slate-300">Decentralized. Free. Borderless.<br><span class="text-blue-400">Prevent • Report • Expose</span></p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
-                <a href="#scanner-demo" class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl text-xl font-semibold transition-all">Try Wallet Scanner</a>
+                <a href="#scanner-demo" onclick="fakeScan()" class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl text-xl font-semibold transition-all">Try Wallet Scanner</a>
                 <a href="https://github.com/leo1cruzer-beep/Aegis" target="_blank" class="border border-slate-400 hover:border-white px-10 py-5 rounded-2xl text-xl font-semibold transition-all">GitHub Repo →</a>
             </div>
 
             <div class="mt-16 flex justify-center gap-12 text-sm uppercase tracking-widest text-slate-400">
                 <div>Free Forever</div>
                 <div>Community Owned</div>
-                <div>On-Chain Verified</div>
+                <div>On-Chain Intelligence</div>
             </div>
         </div>
     </header>
@@ -114,6 +111,22 @@
         </div>
     </section>
 
+    <!-- Fake Scanner Demo -->
+    <section id="scanner-demo" class="py-20 bg-slate-900">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Try the Wallet Scanner (Demo)</h2>
+            <div class="bg-slate-800 p-8 rounded-3xl">
+                <input id="walletInput" type="text" placeholder="Paste wallet address here (e.g. 0x742d35Cc6634C0532925a3b844Bc454e4438f44e)" 
+                       class="w-full bg-slate-900 border border-slate-700 rounded-xl px-6 py-4 text-lg focus:outline-none focus:border-blue-500">
+                <button onclick="fakeScan()" 
+                        class="mt-6 bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-2xl text-lg font-semibold w-full">
+                    Check Address
+                </button>
+                <div id="scanResult" class="mt-8 hidden"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Roadmap + CTA -->
     <section class="py-20">
         <div class="max-w-6xl mx-auto px-6 text-center">
@@ -135,7 +148,26 @@
     </section>
 
     <footer class="border-t border-slate-800 py-12 text-center text-slate-500">
-        <p>AEGIS — Open Source • MIT License • Built by the Community for Justice</p>
+        <p>AEGIS — Open Source • MIT License • Built by the Community</p>
     </footer>
+
+    <script>
+        function fakeScan() {
+            const input = document.getElementById('walletInput');
+            const result = document.getElementById('scanResult');
+            result.classList.remove('hidden');
+            if (input.value.trim() === '') {
+                result.innerHTML = `<p class="text-red-400">Please enter a wallet address.</p>`;
+                return;
+            }
+            result.innerHTML = `
+                <div class="bg-slate-900 p-6 rounded-2xl text-left">
+                    <p class="text-emerald-400 font-semibold">✅ Low Risk</p>
+                    <p class="text-slate-400 mt-2">No known scam reports found for this address.</p>
+                    <p class="text-xs text-slate-500 mt-4">This is a demo. Real version coming in Phase 1.</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
