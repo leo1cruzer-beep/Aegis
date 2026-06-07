@@ -5,360 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AEGIS — Public Scam Intelligence Network</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
-        
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Playfair Display', sans-serif;
-        }
-
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-        }
-
-        .shield-icon {
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
-    <!-- Navbar -->
-    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shield-icon">🛡️</div>
-                <span class="heading-font text-3xl font-bold tracking-tight">AEGIS</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
-                <a href="#how" class="hover:text-blue-400 transition-colors">How it Works</a>
-                <a href="#roadmap" class="hover:text-blue-400 transition-colors">Roadmap</a>
-                <a href="#community" class="hover:text-blue-400 transition-colors">Community</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="https://github.com/yourusername/aegis" target="_blank" 
-                   class="px-5 py-2.5 text-sm font-semibold border border-zinc-700 hover:border-zinc-400 rounded-2xl transition-all flex items-center gap-2">
-                    <i class="fab fa-github"></i>
-                    <span>Star on GitHub</span>
-                </a>
-                <a href="#" onclick="alert('Demo coming soon — join the waitlist!')" 
-                   class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-2xl transition-all">
-                    Try Scanner
-                </a>
-            </div>
-        </div>
-    </nav>
-
+<body class="bg-slate-950 text-slate-200">
     <!-- Hero -->
-    <header class="hero-bg pt-24 pb-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 bg-zinc-900 border border-blue-900 text-blue-400 text-sm font-medium px-4 py-1.5 rounded-3xl mb-6">
-                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                Phase 0 — Open Source Launch
+    <header class="hero-bg py-20 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <span class="text-6xl">🛡️</span>
             </div>
-            
-            <h1 class="heading-font text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6 max-w-4xl mx-auto">
-                Justice for the<br>Digital Age
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                A decentralized, free public scam intelligence network. 
-                Prevent. Report. Expose. Powered by AI, blockchain, and community.
+            <h1 class="text-7xl font-bold tracking-tight mb-4">AEGIS</h1>
+            <p class="text-2xl text-slate-400 mb-8">Public Scam Intelligence Network</p>
+            <p class="max-w-2xl mx-auto text-xl text-slate-300">
+                Decentralized. Free. Borderless.<br>
+                <span class="text-blue-400 font-semibold">Prevent • Report • Expose</span>
             </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" onclick="alert('Basic scanner prototype coming soon. Join GitHub for updates!')" 
-                   class="px-10 py-4 bg-white text-zinc-900 font-semibold text-lg rounded-3xl hover:bg-zinc-100 transition-all flex items-center justify-center gap-3 text-lg">
-                    <i class="fas fa-search"></i>
-                    Check Wallet Now
-                </a>
-                <a href="https://github.com/yourusername/aegis" target="_blank"
-                   class="px-10 py-4 border border-zinc-400 font-semibold text-lg rounded-3xl hover:bg-zinc-900 transition-all flex items-center justify-center gap-3">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <a href="#scanner" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-lg font-semibold transition">Try Wallet Scanner →</a>
+                <a href="https://github.com/leo1cruzer-beep/Aegis" target="_blank" class="border border-slate-400 hover:border-white px-8 py-4 rounded-xl text-lg font-semibold transition">GitHub Repo</a>
             </div>
-            
-            <div class="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm text-zinc-500">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-shield-alt text-emerald-400"></i>
-                    <span>Free Forever</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-globe text-blue-400"></i>
-                    <span>Borderless</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-users text-amber-400"></i>
-                    <span>Community Owned</span>
-                </div>
+            <div class="mt-12 flex justify-center gap-8 text-sm uppercase tracking-widest text-slate-400">
+                <div>Free Forever</div>
+                <div>Community Owned</div>
+                <div>On-Chain Intelligence</div>
             </div>
         </div>
     </header>
 
-    <!-- Trust Bar -->
-    <div class="border-b border-zinc-800 bg-zinc-900 py-6">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-zinc-400 text-sm">
-                <div class="flex items-center gap-3">
-                    <span class="font-mono text-emerald-400">ON-CHAIN</span>
-                    <span class="text-zinc-500">•</span>
-                    <span>Real-time Intelligence</span>
+    <!-- Crisis -->
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Scams thrive in the shadows.<br>We bring them into the light.</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-slate-800 p-8 rounded-2xl">
+                    <h3 class="text-red-400 text-xl mb-6">Traditional Justice</h3>
+                    <ul class="space-y-6 text-slate-300">
+                        <li class="flex gap-4"><span class="text-red-500">→</span> Report to authorities → File closed</li>
+                        <li class="flex gap-4"><span class="text-red-500">→</span> Only the rich can afford lawyers</li>
+                        <li class="flex gap-4"><span class="text-red-500">→</span> Scammers adapt and repeat</li>
+                    </ul>
                 </div>
-                <div>Built for Crypto • Expanding Globally</div>
-                <div class="flex items-center gap-2 text-amber-400">
-                    <i class="fas fa-fire"></i>
-                    <span>Protecting billions in assets</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Problem -->
-    <section class="py-20 bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="uppercase tracking-widest text-blue-500 text-sm font-medium mb-3">The Crisis</div>
-                    <h2 class="heading-font text-5xl font-bold tracking-tight leading-tight mb-8">
-                        Scams thrive in the shadows.<br>
-                        <span class="text-zinc-400">We bring them into the light.</span>
-                    </h2>
-                    <div class="space-y-6 text-lg text-zinc-400">
-                        <p>Every year, billions are lost to crypto scams — often with no recourse for ordinary people.</p>
-                        <p>Traditional systems are slow, expensive, and jurisdiction-bound. Victims in developing countries are hit hardest.</p>
-                    </div>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-red-900/30">
-                    <div class="text-red-400 text-sm font-medium mb-6 flex items-center gap-2">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        TRADITIONAL JUSTICE
-                    </div>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4">
-                            <span class="text-2xl text-red-500">→</span>
-                            <div>
-                                <div class="font-medium">Report to authorities</div>
-                                <div class="text-zinc-500">File closed. Case dropped.</div>
-                            </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="text-2xl text-red-500">→</span>
-                            <div>
-                                <div class="font-medium">Hire expensive lawyers</div>
-                                <div class="text-zinc-500">Only the rich recover funds.</div>
-                            </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="text-2xl text-red-500">→</span>
-                            <div>
-                                <div class="font-medium">Scammers adapt &amp; repeat</div>
-                                <div class="text-zinc-500">No global shared intelligence.</div>
-                            </div>
-                        </li>
+                <div class="bg-slate-800 p-8 rounded-2xl border border-blue-500/30">
+                    <h3 class="text-blue-400 text-xl mb-6">The AEGIS Difference</h3>
+                    <ul class="space-y-6 text-slate-300">
+                        <li class="flex gap-4"><span class="text-blue-500">→</span> Instant wallet risk check</li>
+                        <li class="flex gap-4"><span class="text-blue-500">→</span> AI-powered evidence reports</li>
+                        <li class="flex gap-4"><span class="text-blue-500">→</span> Public, tamper-proof exposure</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution / Features -->
-    <section id="features" class="py-20 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="uppercase text-emerald-400 text-sm tracking-widest font-medium">THE AEGIS DIFFERENCE</div>
-                <h2 class="heading-font text-5xl font-bold tracking-tighter mt-3">Powerful. Transparent. Yours.</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 hover:border-blue-600 transition-all group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🔍</div>
-                    <h3 class="text-2xl font-semibold mb-3">Instant Wallet Scanner</h3>
-                    <p class="text-zinc-400">Paste any address. Get risk score based on on-chain history, community reports, and known scam patterns in seconds.</p>
-                    <ul class="mt-6 space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Multi-chain support</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Real-time alerts</li>
-                    </ul>
+    <!-- Features -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Powerful. Transparent. Yours.</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="text-5xl mb-6">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-4">Instant Wallet Scanner</h3>
+                    <p class="text-slate-400">Paste any address. Get risk score from on-chain history + community reports in seconds.</p>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 hover:border-blue-600 transition-all group">
-                    <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">📋</div>
-                    <h3 class="text-2xl font-semibold mb-3">AI-Powered Reporting</h3>
-                    <p class="text-zinc-400">Submit evidence. Our system analyzes transactions, screenshots, and comms to build verifiable, tamper-proof profiles.</p>
-                    <ul class="mt-6 space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> IPFS storage</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Blockchain logging</li>
-                    </ul>
+                <div class="text-center">
+                    <div class="text-5xl mb-6">📋</div>
+                    <h3 class="text-2xl font-semibold mb-4">AI-Powered Reporting</h3>
+                    <p class="text-slate-400">Submit evidence. Build verifiable profiles stored on IPFS + blockchain.</p>
                 </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 hover:border-blue-600 transition-all group">
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🌐</div>
-                    <h3 class="text-2xl font-semibold mb-3">Public Intelligence Network</h3>
-                    <p class="text-zinc-400">Transparent dashboard of scammer profiles. Community verification. Global exposure that follows them everywhere.</p>
-                    <ul class="mt-6 space-y-3 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Open data</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Future exchange alerts</li>
-                    </ul>
+                <div class="text-center">
+                    <div class="text-5xl mb-6">🌐</div>
+                    <h3 class="text-2xl font-semibold mb-4">Public Intelligence Network</h3>
+                    <p class="text-slate-400">Transparent dashboard. Community verification. Global exposure.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How it Works -->
-    <section id="how" class="py-20 bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-5xl font-bold tracking-tighter">How AEGIS Works</h2>
-                <p class="text-zinc-400 mt-4 max-w-md mx-auto">Simple for victims. Powerful for justice.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-4xl mb-6">1</div>
-                    <h4 class="font-semibold text-xl mb-2">Prevent</h4>
-                    <p class="text-zinc-400">Before sending crypto, check the recipient address. Stop scams before they happen.</p>
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">How AEGIS Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-800 p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-4">01</div>
+                    <h3 class="text-2xl mb-4">Prevent</h3>
+                    <p>Check recipient address before sending. Stop scams before they happen.</p>
                 </div>
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-4xl mb-6">2</div>
-                    <h4 class="font-semibold text-xl mb-2">Report</h4>
-                    <p class="text-zinc-400">Got scammed? Submit evidence. AI helps package it into a public, verifiable report.</p>
+                <div class="bg-slate-800 p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-4">02</div>
+                    <h3 class="text-2xl mb-4">Report</h3>
+                    <p>Got scammed? AI helps package evidence into a public report.</p>
                 </div>
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-4xl mb-6">3</div>
-                    <h4 class="font-semibold text-xl mb-2">Expose &amp; Neutralize</h4>
-                    <p class="text-zinc-400">Profile goes public. Wallets warned. Exchanges alerted. Scammers isolated.</p>
+                <div class="bg-slate-800 p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-4">03</div>
+                    <h3 class="text-2xl mb-4">Expose & Neutralize</h3>
+                    <p>Profile published. Wallets warned. Scammers isolated.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roadmap -->
-    <section id="roadmap" class="py-20 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="uppercase text-amber-400 text-sm tracking-widest">ROADMAP</div>
-                <h2 class="heading-font text-5xl font-bold tracking-tighter mt-3">From Vision to Reality</h2>
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-12">
-                <div class="flex gap-8">
-                    <div class="w-28 flex-shrink-0 text-right">
-                        <div class="text-emerald-400 font-mono">NOW</div>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Phase 0: Foundation</h4>
-                        <p class="text-zinc-400">Whitepaper, GitHub repo, basic open-source scanner, community building.</p>
-                    </div>
+    <!-- Roadmap & CTA -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">From Vision to Reality</h2>
+            <div class="inline-flex flex-col md:flex-row gap-6 text-left max-w-2xl mx-auto">
+                <div class="bg-slate-800 p-6 rounded-2xl flex-1">
+                    <span class="text-emerald-400 font-bold">NOW — Phase 0</span>
+                    <p class="mt-4">Whitepaper, open-source foundation, community building.</p>
                 </div>
-                <div class="flex gap-8">
-                    <div class="w-28 flex-shrink-0 text-right">
-                        <div class="text-amber-400 font-mono">Q3 2026</div>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Phase 1: MVP</h4>
-                        <p class="text-zinc-400">Web app, database, wallet checker, report submission, public dashboard.</p>
-                    </div>
-                </div>
-                <div class="flex gap-8">
-                    <div class="w-28 flex-shrink-0 text-right">
-                        <div class="text-blue-400 font-mono">2027</div>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Phase 2+: Full Power</h4>
-                        <p class="text-zinc-400">Mobile app, AI enhancements, token incentives, exchange integrations, full decentralization.</p>
-                    </div>
+                <div class="bg-slate-800 p-6 rounded-2xl flex-1">
+                    <span class="text-blue-400 font-bold">Q3 2026 — Phase 1</span>
+                    <p class="mt-4">Web MVP, wallet checker, public dashboard.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-br from-blue-950 to-zinc-950 border-t border-blue-900">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 class="heading-font text-5xl font-bold tracking-tighter mb-6">Join the Movement</h2>
-            <p class="text-xl text-zinc-300 mb-10">Help build the decentralized justice layer the world needs. No gatekeepers. Real impact.</p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://github.com/yourusername/aegis" target="_blank"
-                   class="px-8 py-4 bg-white text-zinc-900 rounded-3xl font-semibold flex items-center justify-center gap-3 hover:scale-105 transition-transform">
-                    <i class="fab fa-github text-xl"></i>
-                    Contribute on GitHub
-                </a>
-                <a href="#" onclick="alert('Discord / Telegram coming soon! Follow GitHub for updates.')" 
-                   class="px-8 py-4 border border-zinc-400 text-white rounded-3xl font-semibold flex items-center justify-center gap-3 hover:bg-zinc-900 transition-all">
-                    Join Community
+            <div class="mt-16">
+                <a href="https://github.com/leo1cruzer-beep/Aegis" target="_blank" class="inline-block bg-white text-slate-900 px-10 py-5 rounded-2xl font-semibold text-xl hover:scale-105 transition">
+                    Join the Movement on GitHub →
                 </a>
             </div>
-            
-            <p class="text-xs text-zinc-500 mt-10">Open source • MIT License • Community governed</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-16 border-t border-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-8 h-8 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl">🛡️</div>
-                        <span class="heading-font text-3xl font-bold">AEGIS</span>
-                    </div>
-                    <p class="max-w-xs text-zinc-500">A public good for the crypto age and beyond. Justice, democratized.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-10 text-sm">
-                    <div>
-                        <div class="font-medium mb-4 text-zinc-400">Product</div>
-                        <div class="space-y-3 text-zinc-500">
-                            <div>Scanner</div>
-                            <div>Reporter</div>
-                            <div>Dashboard</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-medium mb-4 text-zinc-400">Resources</div>
-                        <div class="space-y-3 text-zinc-500">
-                            <div><a href="#" class="hover:text-white">Whitepaper</a></div>
-                            <div><a href="#" class="hover:text-white">Docs</a></div>
-                            <div><a href="https://github.com/yourusername/aegis" class="hover:text-white">GitHub</a></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-medium mb-4 text-zinc-400">Community</div>
-                        <div class="space-y-3 text-zinc-500">
-                            <div>Twitter</div>
-                            <div>Discord</div>
-                            <div>Telegram</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-medium mb-4 text-zinc-400">Legal</div>
-                        <div class="space-y-3 text-zinc-500">
-                            <div>Disclaimer</div>
-                            <div>Privacy</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-20 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-600">
-                © 2026 AEGIS Project. Not affiliated with any government or corporation. 
-                Built by the people, for the people.
-            </div>
-        </div>
+    <footer class="border-t border-slate-800 py-12 text-center text-slate-500 text-sm">
+        <p>AEGIS — Open Source • MIT License • Built by the Community</p>
     </footer>
-
-    <script>
-        // Tailwind script already loaded via CDN
-        console.log('%cAEGIS — Public Scam Intelligence Network', 'color: #3b82f6; font-size: 14px; font-weight: bold;');
-    </script>
 </body>
 </html>
